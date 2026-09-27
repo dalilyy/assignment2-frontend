@@ -1,0 +1,269 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e8edff;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f4ff;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000033;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 300px auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 15px;
+}
+
+.grid-header {
+    grid-area: header;
+    background-color: #dce5ff;
+    padding: 20px;
+}
+
+.grid-sidebar {
+    grid-area: sidebar;
+    background-color: #e9eeff;
+    padding: 20px;
+}
+
+.grid-main {
+    grid-area: main;
+    background-color: #f4f6ff;
+    padding: 20px;
+}
+
+.grid-footer {
+    grid-area: footer;
+    background-color: #dce5ff;
+    padding: 20px;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #24304a;
+    background-color: #f6f8ff;
+}
+
+h1, h2 {
+    color: #263b78;
+}
+
+header,
+.grid-header,
+.grid-sidebar,
+.grid-main,
+.grid-footer,
+.card {
+    border-radius: 14px;
+}
+
+header {
+    margin: 16px;
+    box-shadow: 0 4px 16px #30427218;
+}
+
+nav a {
+    color: #344e9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #7892eb;
+}
+
+.cards {
+    margin: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 14px #30427218;
+}
+
+.card img {
+    height: 230px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.card button {
+    margin-top: auto;
+    padding: 11px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #526dc4;
+    color: white;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #354e9f;
+}
+
+.page-grid {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+.grid-header {
+    color: white;
+    background: linear-gradient(120deg, #526dc4, #8c9eeb);
+}
+
+.grid-header h1 {
+    color: white;
+}
+
+.grid-sidebar,
+.grid-main,
+.grid-footer {
+    box-shadow: 0 4px 14px #30427218;
+}
+
+.grid-footer {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.gallery figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px #30427225;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px;
+    color: white;
+    background-color: #24304acc;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.gallery figure:hover figcaption {
+    opacity: 1;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+.projects,
+.portfolio-sidebar {
+    padding: 25px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px #30427218;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #edf1ff;
+}
+
+.project-card h2 {
+    margin-top: 0;
+}
+
+.project-card a {
+    margin-top: auto;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #526dc4;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    background-color: #354e9f;
+}
+
+.portfolio-footer {
+    margin: 30px 16px 16px;
+    padding: 18px;
+    border-radius: 14px;
+    background-color: #263b78;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .portfolio,
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
